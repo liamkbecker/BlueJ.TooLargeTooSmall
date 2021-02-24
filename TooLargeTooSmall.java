@@ -12,13 +12,21 @@ public class TooLargeTooSmall {
      * Constructor for objects of class TooLargeTooSmall
      */
     public TooLargeTooSmall(Integer seed) {
-        // initialise instance variables
+        //initialize
         chosenNum = seed;
     }
     
     public Integer guess(Integer g) {
         
-        return chosenNum;
+        if (g == chosenNum) {
+            return 0;
+        }
+        else if (g > chosenNum) {
+            return 1;
+        }
+        else {
+            return -1;
+        }
 
     }
 }
